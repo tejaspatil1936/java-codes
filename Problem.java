@@ -15,8 +15,8 @@ class Box {
 
 public class Problem {
     public static void main(String[] args) {
-        Box a;
-        a = new Box();
+        
+        Box a = new Box();
         a.setDimension(10, 5, 3);
         a.volume();
     }
