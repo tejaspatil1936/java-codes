@@ -20,7 +20,7 @@ class rectangle {
       return a;
    }
 
-   public void setdimension(int m, int n) {
+   public void setdimension(int m, int n) { 
       length = m;
       breadth = n;
    }
