@@ -1,9 +1,9 @@
- 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class Swap extends JFrame implements ActionListener {
+class SwingComponents extends JFrameDemo implements ActionListener 
+{
     JLabel l1, l2, l3, l4, l5, l6, l7, l8;
     JTextField jtf1, jtf2, jtf3;
     JPasswordField jpf; 
@@ -14,20 +14,20 @@ public class Swap extends JFrame implements ActionListener {
     JCheckBox ajp, jsp, cns;
     JList<String> courseList;
     JScrollPane courseScrollPane;
-    Container c;
+    java.awt.Container c;
     JMenuBar mbr;
-    JMenu d1, f1; // Department and Faculties menus
+    JMenu d1; // Department menu
+    JMenu f1; // Faculties menu
     JMenuItem compItem, itItem, chemItem, petroItem, principalItem, officeStaffItem, profItem;
-
-    // Constructor
-    Swap() {
+    SwingComponents() 
+    {
         c = getContentPane();
         c.setBackground(Color.PINK);
-        setLayout(null);  // Using absolute positioning
+        setLayout(null);
 
         Font f = new Font("Arial", Font.BOLD, 13);
 
-        // Name Label and TextField
+        // Labels and text fields
         l1 = new JLabel("Enter Your Name");
         l1.setBounds(60, 50, 150, 20);
         l1.setForeground(Color.BLUE);
@@ -39,7 +39,6 @@ public class Swap extends JFrame implements ActionListener {
         jtf1.setFont(f);
         c.add(jtf1);
 
-        // College Name Label and TextField
         l2 = new JLabel("Enter Your College Name");
         l2.setBounds(60, 90, 150, 20);
         l2.setForeground(Color.BLUE);
@@ -51,7 +50,6 @@ public class Swap extends JFrame implements ActionListener {
         jtf2.setFont(f);
         c.add(jtf2);
 
-        // Email Label and TextField
         l3 = new JLabel("Enter Your Email");
         l3.setBounds(60, 130, 150, 20);
         l3.setForeground(Color.BLUE);
@@ -63,7 +61,6 @@ public class Swap extends JFrame implements ActionListener {
         jtf3.setFont(f);
         c.add(jtf3);
 
-        // Password Label and PasswordField
         l4 = new JLabel("Enter Email Password");
         l4.setBounds(60, 170, 150, 20);
         l4.setForeground(Color.BLUE);
@@ -76,7 +73,6 @@ public class Swap extends JFrame implements ActionListener {
         jpf.setFont(f);
         c.add(jpf);
 
-        // Address Label and TextArea
         l5 = new JLabel("Enter Your Address");
         l5.setBounds(60, 210, 150, 20);
         l5.setForeground(Color.BLUE);
@@ -101,10 +97,10 @@ public class Swap extends JFrame implements ActionListener {
         jb1.setBounds(220, 290, 120, 20);
         jb1.setForeground(Color.BLUE);
         jb1.setFont(f);
-        jb1.setSelectedIndex(2);
+        jb1.setSelectedIndex(2);// setSelectedIndex Method
         c.add(jb1);
 
-        // Radio Buttons for Gender
+        // Radio Buttons for Gender selection
         male = new JRadioButton("Male");
         female = new JRadioButton("Female");
         male.setSelected(true);
@@ -125,8 +121,8 @@ public class Swap extends JFrame implements ActionListener {
         ajp.setBounds(220, 360, 60, 20);
         jsp.setBounds(280, 360, 60, 20);
         cns.setBounds(340, 360, 60, 20);
-        ajp.setSelected(true);
-        cns.setEnabled(false);
+        ajp.setSelected(true);  // Set Selected Method
+        cns.setEnabled(false);  // SetEnabled Method
         c.add(ajp);
         c.add(jsp);
         c.add(cns);
@@ -144,14 +140,13 @@ public class Swap extends JFrame implements ActionListener {
         courseList.setBounds(220, 400, 120, 50);
         c.add(courseList);
 
-        // Submit Button
+        // Submit button at the bottom
         b1 = new JButton("Submit");
         b1.setBounds(220, 470, 150, 30);
         b1.setForeground(Color.RED);
         b1.setFont(f);
         c.add(b1);
 
-        // Success Message Label
         l6 = new JLabel("Data submitted successfully! You Can Go Back");
         l6.setBounds(150, 510, 300, 30);
         l6.setForeground(Color.RED);
@@ -159,59 +154,64 @@ public class Swap extends JFrame implements ActionListener {
         l6.setVisible(false);
         c.add(l6);
 
-        b1.addActionListener(this);  // Adding ActionListener
+        // Adding ActionListener to the Submit Button
+        b1.addActionListener(this); 
 
-        // Creating MenuBar and Menus
+        // Creating MenuBar
         mbr = new JMenuBar();
-
+        
+        // Creating Department Menu
         d1 = new JMenu("Department");
         d1.setFont(f);
-
+        
+        // Adding menu items to Department
         compItem = new JMenuItem("Computer");
         itItem = new JMenuItem("IT");
         chemItem = new JMenuItem("Chem");
         petroItem = new JMenuItem("Petro");
 
+        // Adding items to the Department menu
         d1.add(compItem);
         d1.add(itItem);
         d1.add(chemItem);
         d1.add(petroItem);
-
-        f1 = new JMenu("Faculties"); // Faculties menu
+        
+        // Creating Faculties Menu
+        f1 = new JMenu("Faculties"); // Created Faculties menu
         f1.setFont(f);
-
+        
+        // Adding menu items to Faculties
         principalItem = new JMenuItem("Principal");
         officeStaffItem = new JMenuItem("Office Staff");
         profItem = new JMenuItem("Professors");
 
+        // Adding items to the Faculties menu
         f1.add(principalItem);
         f1.add(officeStaffItem);
         f1.add(profItem);
-
-        // Add both Department and Faculties menus to the menu bar
+        
+        // Adding Department menu to the menu bar
         mbr.add(d1);
-        mbr.add(f1);
 
-        // Set the menu bar for the frame
+        // Adding menu bar to the frame
         setJMenuBar(mbr);
 
-        // Frame properties
         setVisible(true);
         setTitle("Swing Components Example");
         setSize(700, 600);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
+        setDefaultCloseOperation(JFrameDemo.EXIT_ON_CLOSE);  
     }
 
-    // ActionListener for the Submit button
-    public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == b1) {
-            l6.setVisible(true);  // Show the success message
+    public void actionPerformed(ActionEvent e) 
+    {
+        if (e.getSource() == b1) 
+        {
+            l6.setVisible(true);
         }
     }
 
-    // Main method to run the program
-    public static void main(String args[]) {
-        new Swap();  // Create and display the GUI
+    public static void main(String args[]) 
+    {
+        new SwingComponents();
     }
 }
-

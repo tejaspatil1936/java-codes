@@ -17,6 +17,42 @@
 // v = new vector(10,5);
 
 // vector (collection c)
+import java.util.*;
+
+public
+import java.util.*;
+
+public class vector {
+    public static void main(String[] args) {
+        vector vec = new vector();
+        vec.add(2.5);
+        vec.add(2.4);
+        vec.add(8.6);
+        vec.add(12.4); class vector {
+    public static void main(String[] args) {
+        vector vec = new vector();
+        vec.add(2.5);
+        vec.add(2.4);
+        vec.add(8.6);
+        vec.add(12.4);
+import java.util.*;
+
+public class vector {
+    public static void main(String[] args) {
+        vector vec = new vector();
+        vec.add(2.5);
+        vec.add(2.4);
+        vec.add(8.6);
+        vec.add(12.4);
+import java.util.*;
+
+public class vector {
+    public static void main(String[] args) {
+        vector vec = new vector();
+        vec.add(2.5);
+        vec.add(2.4);
+        vec.add(8.6);
+        vec.add(12.4);
 // create a vector that contain elements of collection c 
 
 // get method is to get an element at a particular index
