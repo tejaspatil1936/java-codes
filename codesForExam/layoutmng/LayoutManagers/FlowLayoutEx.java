@@ -1,4 +1,3 @@
-package LayoutManagers;
 import javax.swing.*;
 import java.awt.*;
 public class FlowLayoutEx extends JFrame{

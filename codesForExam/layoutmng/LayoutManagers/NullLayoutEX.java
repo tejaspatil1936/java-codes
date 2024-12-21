@@ -1,5 +1,3 @@
-
-package LayoutManagers;
 import javax.swing.*;
 import java.awt.*;
 public class NullLayoutEX extends JFrame {

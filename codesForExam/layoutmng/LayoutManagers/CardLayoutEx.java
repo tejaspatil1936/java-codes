@@ -1,4 +1,3 @@
-package LayoutManagers;
 import javax.swing.*;
 import java.awt.*;
 public class CardLayoutEx extends JFrame {
