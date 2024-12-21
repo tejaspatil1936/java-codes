@@ -2,7 +2,7 @@
 // the sleep method is to put a thread into a temporary waiting state.
 // Example: Thread.sleep(milliseconds-1000)
 
-package Threads_Methods;
+package thread;
 
 class Sleep_Method extends Thread
 {
