@@ -16,10 +16,10 @@ class InterruptMethod extends Thread{
     }
 }
 
-class Main{
+public class Main{
     public static void main(String[] args) {
         InterruptMethod t=new InterruptMethod();
         t.start();
-        t.interrupt();
+        // t.interrupt();
     }
 }

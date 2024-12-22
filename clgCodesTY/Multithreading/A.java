@@ -1,7 +1,7 @@
 // package Multithreading;
 // import java.lang.*;
 
-public class ThreadClass extends Thread{
+class ThreadClass extends Thread{
     public void run(){
         try{
             for(int i=1;i<=5;i++){
@@ -15,7 +15,7 @@ public class ThreadClass extends Thread{
 
     }
 }
-class A{
+public class A{
     public static void main(String[] args) throws InterruptedException {
         ThreadClass t=new ThreadClass();
         t.start();

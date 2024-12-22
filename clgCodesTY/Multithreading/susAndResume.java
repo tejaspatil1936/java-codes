@@ -21,7 +21,7 @@ public class susAndResume {
 
         t1.start();
         t2.start();
-    //    t2.suspend();
+       t2.suspend();
     //    t2.resume();
         t3.start();
 
