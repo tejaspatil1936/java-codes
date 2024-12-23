@@ -6,7 +6,7 @@ class Blockex extends Thread{
         for(int i=1;i<=3;i++){
             System.out.println(n+" -Unsynchronized loop iteration");
         }
-//        System.out.println("1st for loop executed");
+//System.out.println("1st for loop executed");
         synchronized (this){
             for(int i=1;i<=3;i++){
                 System.out.println(n+" -Synchronized loop iteration");
@@ -14,7 +14,7 @@ class Blockex extends Thread{
         }
     }
 }
-public class Blockex1{
+class Blockex1{
     public static void main(String[] args) {
         Blockex t1=new Blockex();
         Blockex t2=new Blockex();

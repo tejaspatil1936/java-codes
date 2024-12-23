@@ -9,7 +9,7 @@ class StopMethod extends Thread{
         }
     }
 }
-public class stopMeth {
+class stopMeth {
     public static void main(String[] args) {
         StopMethod t1 = new StopMethod();
         StopMethod t2 = new StopMethod();

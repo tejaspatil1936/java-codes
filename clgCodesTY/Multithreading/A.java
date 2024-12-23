@@ -2,6 +2,7 @@
 // import java.lang.*;
 
 class ThreadClass extends Thread{
+    @Override
     public void run(){
         try{
             for(int i=1;i<=5;i++){
@@ -9,13 +10,13 @@ class ThreadClass extends Thread{
                 Thread.sleep(1000); //print the output after 1 sec
             }
         }
-        catch (InterruptedException i){
+        catch (InterruptedException e){
 
         }
 
     }
 }
-public class A{
+class A{
     public static void main(String[] args) throws InterruptedException {
         ThreadClass t=new ThreadClass();
         t.start();

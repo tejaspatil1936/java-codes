@@ -9,7 +9,7 @@ class IsaliveMethod extends Thread{
         }
     }
 }
-public class IsaliveMethod1 {
+class IsaliveMethod1 {
     public static void main(String[] args) {
         IsaliveMethod t1 = new IsaliveMethod();
         IsaliveMethod t2 = new IsaliveMethod();

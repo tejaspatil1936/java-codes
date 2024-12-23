@@ -1,4 +1,4 @@
-public class methodex extends Thread{
+class methodex extends Thread{
     @Override
     public synchronized void run() {
         String n=Thread.currentThread().getName();

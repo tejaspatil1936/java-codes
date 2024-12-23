@@ -7,7 +7,6 @@ class InterruptMethod extends Thread{
             for (int i=1;i<=3;i++){
                 System.out.println("thread t");
                 sleep(1000);
-
             }
         }
         catch(InterruptedException e){
@@ -16,10 +15,10 @@ class InterruptMethod extends Thread{
     }
 }
 
-public class Main{
+class Main{
     public static void main(String[] args) {
         InterruptMethod t=new InterruptMethod();
         t.start();
-        // t.interrupt();
+        t.interrupt();
     }
 }

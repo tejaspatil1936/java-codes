@@ -7,6 +7,7 @@ class YieldMethod extends Thread{
         for(int i=1;i<=3;i++){
             System.out.println(n);
             Thread.yield();
+            
         }
     }
 }
